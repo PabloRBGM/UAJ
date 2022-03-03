@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{43E1A6EB-49A1-4078-8D40-6A7103B72383}</ProjectGuid>
+    <RootNamespace>MFFighterTraighter</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\SDL2-2.0.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\SDL2_mixer-2.0.4\include;..\SDL2_ttf-2.0.15\include;..\SDL2_image-2.0.5\include;..\SDL2-2.0.10\include;..\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>..\SDL2_ttf-2.0.15\lib\x64;..\SDL2_image-2.0.5\lib\x64;..\SDL2_mixer-2.0.4\lib\x64;..\SDL2-2.0.10\lib\x64;..\Box2D\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\SDL2-2.0.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\SDL2_mixer-2.0.4\include;..\SDL2_ttf-2.0.15\include;..\SDL2_image-2.0.5\include;..\SDL2-2.0.10\include;..\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\SDL2_ttf-2.0.15\lib\x64;..\SDL2_image-2.0.5\lib\x64;..\SDL2_mixer-2.0.4\lib\x64;..\SDL2-2.0.10\lib\x64;..\Box2D\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AbilitiesTimerFunction.cpp" />
+    <ClCompile Include="AbilityFactory.cpp" />
+    <ClCompile Include="AIAttacks.cpp" />
+    <ClCompile Include="AIController.cpp" />
+    <ClCompile Include="AIGameState.cpp" />
+    <ClCompile Include="AIHID.cpp" />
+    <ClCompile Include="AILogic.cpp" />
+    <ClCompile Include="AnimationChain.cpp" />
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="ArcadeEndMenu.cpp" />
+    <ClCompile Include="AudioOptionsLogic.cpp" />
+    <ClCompile Include="ButtonControl.cpp" />
+    <ClCompile Include="CharacterAttacks.cpp" />
+    <ClCompile Include="CharacterController.cpp" />
+    <ClCompile Include="CharacterSelectionHandler.cpp" />
+    <ClCompile Include="CharacterSelectionLogic.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="BulletGravity.cpp" />
+    <ClCompile Include="DestroyAtTime.cpp" />
+    <ClCompile Include="EndMenu.cpp" />
+    <ClCompile Include="Fall_SpawnOnHit.cpp" />
+    <ClCompile Include="F10RData.cpp" />
+    <ClCompile Include="FightController.cpp" />
+    <ClCompile Include="FollowPlayer.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GamepadHID.cpp" />
+    <ClCompile Include="GraphicsOptionsLogic.cpp" />
+    <ClCompile Include="HID.cpp" />
+    <ClCompile Include="ArcadeController.cpp" />
+    <ClCompile Include="IndexSlider.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="InventoryHandler.cpp" />
+    <ClCompile Include="InventoryLogic.cpp" />
+    <ClCompile Include="InventorySelection.cpp" />
+    <ClCompile Include="CharFactory.cpp" />
+    <ClCompile Include="jute.cpp" />
+    <ClCompile Include="KeyboardHID.cpp" />
+    <ClCompile Include="LastHit_Wins.cpp" />
+    <ClCompile Include="MkWH00PData.cpp" />
+    <ClCompile Include="MockingbirdData.cpp" />
+    <ClCompile Include="MoreDamage_Wins.cpp" />
+    <ClCompile Include="MoveParser.cpp" />
+    <ClCompile Include="NavigationController.cpp" />
+    <ClCompile Include="OptionsLogic.cpp" />
+    <ClCompile Include="PlayerAnimation.cpp" />
+    <ClCompile Include="PlayerAttacks.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="CharacterSelection.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Fight.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="GameStateMachine.cpp" />
+    <ClCompile Include="Health.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="OptionsMenu.cpp" />
+    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="PauseMenu.cpp" />
+    <ClCompile Include="PhysicsTransform.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="PlayerData.cpp" />
+    <ClCompile Include="PlayerOnHit.cpp" />
+    <ClCompile Include="PlayerParticleSystem.cpp" />
+    <ClCompile Include="RandomNumberGenerator.cpp" />
+    <ClCompile Include="RenderAnimation.cpp" />
+    <ClCompile Include="RenderImage.cpp" />
+    <ClCompile Include="LinkedGrid.cpp" />
+    <ClCompile Include="Shake.cpp" />
+    <ClCompile Include="SkillSelectionLogic.cpp" />
+    <ClCompile Include="SRandBasedGenerator.cpp" />
+    <ClCompile Include="TrainingController.cpp" />
+    <ClCompile Include="UIElement.cpp" />
+    <ClCompile Include="UIHealthbar.cpp" />
+    <ClCompile Include="UIRoundRenderer.cpp" />
+    <ClCompile Include="UITimer.cpp" />
+    <ClCompile Include="UITransform.cpp" />
+    <ClCompile Include="UserData.cpp" />
+    <ClCompile Include="WindowManager.cpp" />
+    <ClCompile Include="SacoManager.cpp" />
+    <ClCompile Include="SDLDebugDraw.cpp" />
+    <ClCompile Include="SkillSelection.cpp" />
+    <ClCompile Include="Slider.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="TextComponent.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="AssetsManager.cpp" />
+    <ClCompile Include="Training.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="UIFactory.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="VerticalSlider.cpp" />
+    <ClCompile Include="ControlsMenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbilitiesTimerFunction.h" />
+    <ClInclude Include="AbilityFactory.h" />
+    <ClInclude Include="AIAttacks.h" />
+    <ClInclude Include="AIController.h" />
+    <ClInclude Include="AIGameState.h" />
+    <ClInclude Include="AIHID.h" />
+    <ClInclude Include="AILogic.h" />
+    <ClInclude Include="AnimationChain.h" />
+    <ClInclude Include="App.h" />
+    <ClInclude Include="ArcadeEndMenu.h" />
+    <ClInclude Include="AudioOptionsLogic.h" />
+    <ClInclude Include="ButtonControl.h" />
+    <ClInclude Include="CharacterAttacks.h" />
+    <ClInclude Include="CharacterController.h" />
+    <ClInclude Include="CharacterSelectionHandler.h" />
+    <ClInclude Include="CharacterSelectionLogic.h" />
+    <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="BulletGravity.h" />
+    <ClInclude Include="DestroyAtTime.h" />
+    <ClInclude Include="DestroyOnHit.h" />
+    <ClInclude Include="EndMenu.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="Fall_SpawnOnHit.h" />
+    <ClInclude Include="CharFactory.h" />
+    <ClInclude Include="F10RData.h" />
+    <ClInclude Include="FightController.h" />
+    <ClInclude Include="FloorOnHit.h" />
+    <ClInclude Include="FollowPlayer.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GamepadHID.h" />
+    <ClInclude Include="GraphicsOptionsLogic.h" />
+    <ClInclude Include="HID.h" />
+    <ClInclude Include="HitboxData.h" />
+    <ClInclude Include="AssetsExceptions.h" />
+    <ClInclude Include="ArcadeController.h" />
+    <ClInclude Include="IceDestroyOnHit.h" />
+    <ClInclude Include="IndexSlider.h" />
+    <ClInclude Include="InventoryHandler.h" />
+    <ClInclude Include="InventoryLogic.h" />
+    <ClInclude Include="InventorySelection.h" />
+    <ClInclude Include="jute.h" />
+    <ClInclude Include="KeyboardHID.h" />
+    <ClInclude Include="LastHit_Wins.h" />
+    <ClInclude Include="MkWH00PData.h" />
+    <ClInclude Include="MockingbirdData.h" />
+    <ClInclude Include="MoreDamage_Wins.h" />
+    <ClInclude Include="MoveParser.h" />
+    <ClInclude Include="NavigationController.h" />
+    <ClInclude Include="OnHit.h" />
+    <ClInclude Include="OptionsLogic.h" />
+    <ClInclude Include="PlayerAnimation.h" />
+    <ClInclude Include="PlayerAttacks.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="CharacterSelection.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ecs.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Fight.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="GameStateMachine.h" />
+    <ClInclude Include="Health.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="OptionsMenu.h" />
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="PauseMenu.h" />
+    <ClInclude Include="PhysicsTransform.h" />
+    <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="PlayerData.h" />
+    <ClInclude Include="PlayerOnHit.h" />
+    <ClInclude Include="PlayerParticleSystem.h" />
+    <ClInclude Include="PlayerState.h" />
+    <ClInclude Include="PunchingBagOnHit.h" />
+    <ClInclude Include="RandomNumberGenerator.h" />
+    <ClInclude Include="RenderAnimation.h" />
+    <ClInclude Include="RenderImage.h" />
+    <ClInclude Include="LinkedGrid.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Shake.h" />
+    <ClInclude Include="SkillSelectionLogic.h" />
+    <ClInclude Include="SRandBasedGenerator.h" />
+    <ClInclude Include="TrainingController.h" />
+    <ClInclude Include="UIHealthbar.h" />
+    <ClInclude Include="UITimer.h" />
+    <ClInclude Include="UITransform.h" />
+    <ClInclude Include="ResetJumpListener.h" />
+    <ClInclude Include="UserData.h" />
+    <ClInclude Include="VampiricDestroyAtTime.h" />
+    <ClInclude Include="WindowManager.h" />
+    <ClInclude Include="SacoManager.h" />
+    <ClInclude Include="SDLDebugDraw.h" />
+    <ClInclude Include="SDLExceptions.h" />
+    <ClInclude Include="SkillSelection.h" />
+    <ClInclude Include="Slider.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="TextComponent.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="AssetsManager.h" />
+    <ClInclude Include="Training.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="UIFactory.h" />
+    <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="VerticalSlider.h" />
+    <ClInclude Include="ControlsMenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MF-FighterTraighter.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\assets\Assets\images\favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

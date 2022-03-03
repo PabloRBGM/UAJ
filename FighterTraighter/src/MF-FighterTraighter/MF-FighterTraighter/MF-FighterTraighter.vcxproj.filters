@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLDebugDraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetsManager.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterSelection.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Health.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexSlider.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsLogic.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderAnimation.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseMenu.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsMenu.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsTransform.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Slider.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="TextComponent.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="VerticalSlider.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillSelection.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Training.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="UIFactory.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderImage.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerController.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationChain.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveParser.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowManager.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateMachine.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAttacks.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Health.cpp">
+      <Filter>Archivos de origen\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="UIElement.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLDebugDraw.cpp">
+      <Filter>Source Files\type</Filter>
+    </ClCompile>
+    <ClCompile Include="NavigationController.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="UITransform.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedGrid.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedGrid.cpp" />
+    <ClCompile Include="AbilityFactory.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlsMenu.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="UITimer.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAnimation.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="UIHealthbar.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="UIRoundRenderer.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterSelectionLogic.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletGravity.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData.cpp">
+      <Filter>Source Files\OnHit</Filter>
+    </ClCompile>
+    <ClCompile Include="DestroyAtTime.cpp">
+      <Filter>Source Files\OnHit</Filter>
+    </ClCompile>
+    <ClCompile Include="CharFactory.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerData.cpp">
+      <Filter>Source Files\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="MkWH00PData.cpp">
+      <Filter>Source Files\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="MockingbirdData.cpp">
+      <Filter>Source Files\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData.cpp">
+      <Filter>Source Files\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="F10RData.cpp">
+      <Filter>Source Files\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="AbilitiesTimerFunction.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Fall_SpawnOnHit.cpp">
+      <Filter>Source Files\OnHit</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerParticleSystem.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="MockingbirdData.cpp">
+      <Filter>Source Files\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowPlayer.cpp">
+      <Filter>Source Files\OnHit</Filter>
+    </ClCompile>
+    <ClCompile Include="SacoManager.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerOnHit.cpp">
+      <Filter>Source Files\OnHit</Filter>
+    </ClCompile>
+    <ClCompile Include="LastHit_Wins.cpp">
+      <Filter>Source Files\OnHit\PunchingBag</Filter>
+    </ClCompile>
+    <ClCompile Include="MoreDamage_Wins.cpp">
+      <Filter>Source Files\OnHit\PunchingBag</Filter>
+    </ClCompile>
+    <ClCompile Include="AIAttacks.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AIController.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AILogic.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterController.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterSelectionHandler.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="FightController.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Shake.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="TrainingController.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AIHID.cpp">
+      <Filter>Source Files\HIDs</Filter>
+    </ClCompile>
+    <ClCompile Include="HID.cpp">
+      <Filter>Source Files\HIDs</Filter>
+    </ClCompile>
+    <ClCompile Include="GamepadHID.cpp">
+      <Filter>Source Files\HIDs</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardHID.cpp">
+      <Filter>Source Files\HIDs</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomNumberGenerator.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="SRandBasedGenerator.cpp">
+      <Filter>Source Files\Manager and factories</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData.cpp">
+      <Filter>Source Files\OnHit</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonControl.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData.cpp">
+      <Filter>Source Files\OnHit</Filter>
+    </ClCompile>
+    <ClCompile Include="InventoryHandler.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="InventoryLogic.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="InventorySelection.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioOptionsLogic.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsOptionsLogic.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillSelectionLogic.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterAttacks.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AIGameState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="EndMenu.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="MockingbirdData.cpp">
+      <Filter>Source Files\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcadeEndMenu.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcadeController.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="jute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="ecs.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetsManager.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetsExceptions.h">
+      <Filter>Header files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterSelection.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsLogic.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Health.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateMachine.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsMenu.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseMenu.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexSlider.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Slider.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsTransform.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="VerticalSlider.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TextComponent.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Training.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLExceptions.h">
+      <Filter>Header files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFactory.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowManager.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillSelection.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderAnimation.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderImage.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLDebugDraw.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAttacks.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveParser.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationChain.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="OnHit.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FloorOnHit.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="NavigationController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UITransform.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="NavigationController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedGrid.h">
+      <Filter>Header files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="ResetJumpListener.h">
+      <Filter>Header files\Listeners</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedGrid.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="AbilityFactory.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlsMenu.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="UITimer.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAnimation.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UIHealthbar.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletGravity.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerOnHit.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="DestroyOnHit.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="DestroyAtTime.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="HitboxData.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="HitboxData.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="CharFactory.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>Header files\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="MkWH00PData.h">
+      <Filter>Header files\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="MockingbirdData.h">
+      <Filter>Header files\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DestroyOnHit.h">
+      <Filter>Header files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="F10RData.h">
+      <Filter>Header files\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="AbilitiesTimerFunction.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="HitboxData.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="Fall_SpawnOnHit.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="VampiricDestroyAtTime.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="IceDestroyOnHit.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerParticleSystem.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MkWH00PData.h">
+      <Filter>Header files\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>Header files\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="FollowPlayer.h">
+      <Filter>Header files\OnHits</Filter>
+    </ClInclude>
+    <ClInclude Include="SacoManager.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PunchingBagOnHit.h">
+      <Filter>Header files\OnHits\PunchingBag</Filter>
+    </ClInclude>
+    <ClInclude Include="LastHit_Wins.h">
+      <Filter>Header files\OnHits\PunchingBag</Filter>
+    </ClInclude>
+    <ClInclude Include="MoreDamage_Wins.h">
+      <Filter>Header files\OnHits\PunchingBag</Filter>
+    </ClInclude>
+    <ClInclude Include="AIAttacks.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AIController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AIGameState.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="AILogic.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterAttacks.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterSelectionHandler.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterSelectionLogic.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FightController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Shake.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TrainingController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AIHID.h">
+      <Filter>Header files\HIDs</Filter>
+    </ClInclude>
+    <ClInclude Include="HID.h">
+      <Filter>Header files\HIDs</Filter>
+    </ClInclude>
+    <ClInclude Include="GamepadHID.h">
+      <Filter>Header files\HIDs</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardHID.h">
+      <Filter>Header files\HIDs</Filter>
+    </ClInclude>
+    <ClInclude Include="SRandBasedGenerator.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomNumberGenerator.h">
+      <Filter>Header files\Managers and factories</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonControl.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GamepadHID.h">
+      <Filter>Header files\HIDs</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardHID.h">
+      <Filter>Header files\HIDs</Filter>
+    </ClInclude>
+    <ClInclude Include="HID.h">
+      <Filter>Header files\HIDs</Filter>
+    </ClInclude>
+    <ClInclude Include="InventoryLogic.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="InventoryHandler.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="InventorySelection.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioOptionsLogic.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsOptionsLogic.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillSelectionLogic.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EndMenu.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="ArcadeEndMenu.h">
+      <Filter>Header files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="ArcadeController.h">
+      <Filter>Header files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="jute.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{c65c8628-8e81-4a25-b64c-a5687d5fa14e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a2c4f23b-2e16-47e9-8dd4-2c950f01ed59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component">
+      <UniqueIdentifier>{79c884df-4b31-4994-8771-e51a38021fcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Components">
+      <UniqueIdentifier>{a7c099b8-457b-4813-9ddb-02fdcb35ce41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Exceptions">
+      <UniqueIdentifier>{7f74ece4-a03f-467c-8f8f-f555dcfb0e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\GameState">
+      <UniqueIdentifier>{9f6b30f0-fd8c-41b3-8f56-06d41e32abb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameState">
+      <UniqueIdentifier>{1f78502d-43de-41cd-b393-e300d52effed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Entities">
+      <UniqueIdentifier>{d89f4c83-4f66-4aee-8646-fb36c35d4673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Types">
+      <UniqueIdentifier>{579bef71-c772-4b10-a52a-a5d13521f943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Listeners">
+      <UniqueIdentifier>{18d04ed8-c573-40a6-a897-ab56628383d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Manager and factories">
+      <UniqueIdentifier>{93ba5123-48ec-49d2-ae69-9ddb772cc77b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Types">
+      <UniqueIdentifier>{41e6a81d-749c-4cd6-946f-63ac0b631e5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\OnHits">
+      <UniqueIdentifier>{37fcfd60-7960-4747-8836-d6a19a15eb57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Managers and factories">
+      <UniqueIdentifier>{5e0e2b7a-0be3-4397-b253-d5783acd59a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OnHit">
+      <UniqueIdentifier>{ea02945e-25a3-410c-8f90-900a403b7780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\PlayerData">
+      <UniqueIdentifier>{0042383f-0308-41be-9450-54eea99eeb0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PlayerData">
+      <UniqueIdentifier>{1272ddb6-456c-4d0b-85fd-59395543714b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\OnHits\PunchingBag">
+      <UniqueIdentifier>{a197126d-5fe0-48a2-821e-7b60de2e416b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OnHit\PunchingBag">
+      <UniqueIdentifier>{b41915dd-22f5-4e19-9996-2a1ac6dc375d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{3456c557-1dda-469e-9cc1-327593c35442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\HIDs">
+      <UniqueIdentifier>{67a007b1-74f4-48e4-b6f2-7c14012fb22f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HIDs">
+      <UniqueIdentifier>{985c2e64-1117-4842-9fc2-d6a07f79ec6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{785ee6f4-cc0f-4e17-8b19-51dc6a6d5ebd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\assets\Assets\images\favicon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MF-FighterTraighter.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

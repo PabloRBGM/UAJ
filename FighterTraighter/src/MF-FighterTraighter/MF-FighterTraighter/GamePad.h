@@ -1,0 +1,38 @@
+#pragma once
+#include <vector>
+#include <SDL_gamecontroller.h>
+class GamePad
+{
+
+
+	struct  GameController {
+		bool buttons[SDL_CONTROLLER_BUTTON_MAX];
+		int axis[SDL_CONTROLLER_AXIS_MAX];
+	};		
+	std::vector<SDL_GameController*> connectedControllers;
+	std::vector<GamePad> controllerInputs;
+	std::vector<GamePad> lastControllerInputs;
+	int numGamepads;
+
+	typedef enum
+	{
+		SDL_CONTROLLER_BUTTON_INVALID = -1,
+		SDL_CONTROLLER_BUTTON_A,
+		SDL_CONTROLLER_BUTTON_B,
+		SDL_CONTROLLER_BUTTON_X,
+		SDL_CONTROLLER_BUTTON_Y,
+		SDL_CONTROLLER_BUTTON_BACK,
+		SDL_CONTROLLER_BUTTON_GUIDE,
+		SDL_CONTROLLER_BUTTON_START,
+		SDL_CONTROLLER_BUTTON_LEFTSTICK,
+		SDL_CONTROLLER_BUTTON_RIGHTSTICK,
+		SDL_CONTROLLER_BUTTON_LEFTSHOULDER,
+		SDL_CONTROLLER_BUTTON_RIGHTSHOULDER,
+		SDL_CONTROLLER_BUTTON_DPAD_UP,
+		SDL_CONTROLLER_BUTTON_DPAD_DOWN,
+		SDL_CONTROLLER_BUTTON_DPAD_LEFT,
+		SDL_CONTROLLER_BUTTON_DPAD_RIGHT,
+		SDL_CONTROLLER_BUTTON_MAX
+	} SDL_GameControllerButton;
+};
+
