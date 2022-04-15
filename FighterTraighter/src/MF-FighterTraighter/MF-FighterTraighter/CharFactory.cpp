@@ -68,7 +68,7 @@ Entity* CharFactory::addCharacterToGame(App* app, GameState* state, double orien
 		break;
 	}
 
-	//std::vector<AnimationChain*> chains = app_->getAssetsManager()->getMoveParser()->parseFile("../../../../assets/Assets/Config/MovesMK.txt");
+	//std::vector<AnimationChain*> chains = app_->getAssetsManager()->getMoveParser()->parseFile("../../../assets/Assets/Config/MovesMK.txt");
 	e->addComponent<PlayerAttacks>(character->hid, pdata->getNormal_punch(), pdata->air_normal_punch(), pdata->getHard_punch(), pdata->air_hard_punch(),
 		pdata->getNormal_kick(), pdata->air_normal_kick(), pdata->getHard_kick(), pdata->air_hard_kick(), pdata->guard_breaker());
 	e->addComponent<PlayerAnimation>();
@@ -123,7 +123,7 @@ Entity* CharFactory::addAICharacterToGame(App* app, GameState* state, double ori
 		break;
 	}
 
-	//std::vector<AnimationChain*> chains = app_->getAssetsManager()->getMoveParser()->parseFile("../../../../assets/Assets/Config/MovesMK.txt");
+	//std::vector<AnimationChain*> chains = app_->getAssetsManager()->getMoveParser()->parseFile("../../../assets/Assets/Config/MovesMK.txt");
 	e->addComponent<AIAttacks>(pdata->getNormal_punch(), pdata->air_normal_punch(), pdata->getHard_punch(), pdata->air_hard_punch(),
 		pdata->getNormal_kick(), pdata->air_normal_kick(), pdata->getHard_kick(), pdata->air_hard_kick(), pdata->guard_breaker());
 	e->addComponent<PlayerAnimation>();

@@ -4,9 +4,12 @@
 #include "Fight.h"
 #include "OptionsMenu.h"
 #include "Training.h"
-
-
 #include <SDL_mixer.h>
+
+#include "Tracker.h"
+#include <chrono>
+#include "SessionStartEvent.h"
+#include "SessionEndEvent.h"
 
 App::App()
 {
@@ -24,6 +27,11 @@ void App::run()
 	exit = false;
 	SDL_ShowCursor(SDL_DISABLE);
 
+	Tracker::instance()->init();
+	
+	TrackerEvent* even = new SessionStartEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
+	Tracker::instance()->trackEvent(even);
+
 	while (!exit) {
 
 		Uint32 startTime = SDL_GetTicks();
@@ -37,6 +45,11 @@ void App::run()
 		if (frameTime < 1000 / frameRate_)
 			SDL_Delay(1000 / frameRate_ - frameTime);
 	}
+
+	even = new SessionEndEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
+	Tracker::instance()->trackEvent(even);
+	Tracker::instance()->flushPersistence();
+
 }
 
 void App::handleInput()
@@ -90,7 +103,6 @@ void App::init()
 	gameManager_.reset(new GameManager(this));
 	random_.reset(new SRandBasedGenerator());
 	SDL_ShowCursor(0);
-	
 }
 
 void App::clean()
