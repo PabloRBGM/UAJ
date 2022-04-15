@@ -14,6 +14,11 @@
 
 #include "Camera.h"
 #include "Shake.h"
+
+#include "Tracker.h"
+#include "RoundStartEvent.h"
+#include <chrono>
+
 Fight::Fight(App* app) : GameState(app)
 {
 	init();
@@ -24,7 +29,12 @@ void Fight::init()
 	GameState::init();
 	doStep = true;
 
-
+	TrackerEvent* even = new RoundStartEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(),
+		new Characters[2]{ Characters((int)app_->getGameManager()->getPlayerInfo(1).character), Characters((int)app_->getGameManager()->getPlayerInfo(2).character) },
+		new Abilities[2][2]{ {Abilities(app_->getGameManager()->getPlayerInfo(1).abilities[0]), Abilities(app_->getGameManager()->getPlayerInfo(1).abilities[1])},
+		{Abilities(app_->getGameManager()->getPlayerInfo(2).abilities[0]), Abilities(app_->getGameManager()->getPlayerInfo(2).abilities[1])} });
+	
+	Tracker::instance()->trackEvent(even);
 
 	// Background
 	Entity* bg = entManager_.addEntity();
@@ -278,4 +288,5 @@ void Fight::handleInput()
 }
 Fight::~Fight()
 {
+
 }

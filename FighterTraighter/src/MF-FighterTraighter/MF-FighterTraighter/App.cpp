@@ -49,7 +49,6 @@ void App::run()
 	even = new SessionEndEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
 	Tracker::instance()->trackEvent(even);
 	Tracker::instance()->flushPersistence();
-
 }
 
 void App::handleInput()
