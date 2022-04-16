@@ -15,6 +15,7 @@
 #include "RenderAnimation.h"
 #include "FollowPlayer.h"
 #include "PlayerController.h"
+#include "EventData.h"
 
 
 AnimationChain* AbilityFactory::GiveAbility(GameManager::AbilityID id, Entity* e) {
@@ -60,6 +61,8 @@ void AbilityFactory::MG1(Entity* ent)	//Golpes stuneantes
 
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + 225);
 	DestroyAtTime* dT = new DestroyAtTime(2, 7, 50, { (double)orientation_ * 0.5, 0.5 }, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent);
+	dT->abilityID_ = Abilities::MegatonGrip;
+	
 	instanceEntitywHitbox(ent, width, 150, pos, { 0, 0 }, mask, ent->getState(), ent->getApp(), texture, orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::PUNCH), false);
 
@@ -94,6 +97,8 @@ void AbilityFactory::MG2(Entity* ent)	//Finisher explosivo
 	Vector2D pos1 = Vector2D(projX1, phtr->getPosition().getY() + 225);
 	//createProyectile(ent, width1, 150, pos1, { 0, 0 }, 27, 100, { (double)orientation_ * 7500, -5000 }, 15, mask, ent->getState(), ent->getApp(), texture1, orientation_, false);
 	DestroyAtTime* dT = new DestroyAtTime(27, 15, 100, { (double)orientation_ * 40, -8 }, false, id, ent);
+	dT->abilityID_ = Abilities::MegatonGrip;
+
 	instanceEntitywHitbox(ent, width1, 150, pos1, { 0,0 }, mask, ent->getState(), ent->getApp(), texture1, orientation_, dT);
 	int width2 = 250;
 	double projX2 = phtr->getPosition().getX() + (phtr->getWidth() * 3 / 4) + (width2 / 2) + 150;
@@ -101,7 +106,9 @@ void AbilityFactory::MG2(Entity* ent)	//Finisher explosivo
 
 	Vector2D pos2 = Vector2D(projX2, phtr->getPosition().getY() + 225);
 	 dT = new DestroyAtTime(2, 12, 150, { (double)orientation_ * 30, -5 }, false, id, ent);
-	//createProyectile(ent, width2, 180, pos2, { 0, 0 }, 2, 150, { (double)orientation_ * 5250, -4000 }, 12, mask, ent->getState(), ent->getApp(), texture2, orientation_, false);
+	 dT->abilityID_ = Abilities::MegatonGrip;
+
+	 //createProyectile(ent, width2, 180, pos2, { 0, 0 }, 2, 150, { (double)orientation_ * 5250, -4000 }, 12, mask, ent->getState(), ent->getApp(), texture2, orientation_, false);
 	instanceEntitywHitbox(ent, width2, 180, pos2, { 0,0 }, mask, ent->getState(), ent->getApp(), texture1, orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::KICK), false);
 
@@ -151,6 +158,8 @@ void AbilityFactory::SeismicS1(Entity* e)	//the attack to the floor
 	//e->getApp()->getStateMachine()->getCurrentState()->addHitbox({ (double)orientation_ * hitboxX, 105 }, width, 150, 17, 17, 50, { (double)orientation_ * 5, -100 }, pT->getBody(), e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e, pT->getCategory(), pT->getMask());
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + phtr->getHeight() + -65);
 	DestroyAtTime* dT = new DestroyAtTime(17, 50, 200, { (double)orientation_ * 5, 5 }, false, e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e);
+	dT->abilityID_ = Abilities::SeismicShock;
+
 	//createProyectile(e, width, 150, pos, { 0, 0 }, 17, 200, { (double)orientation_ * 5, 5 }, 50, mask, e->getState(), e->getApp(), texture, orientation_, false);
 	instanceEntitywHitbox(e, width, 120, pos, { 0,0 }, mask, e->getState(), e->getApp(), texture, orientation_, dT);
 	e->getApp()->getAudioMngr()->playSFX(e->getApp()->getAssetsManager()->getSFX(AssetsManager::ROCAS), false);
@@ -169,6 +178,8 @@ void AbilityFactory::SeismicS2(Entity* ent)	//Big rock upwards
 
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + phtr->getHeight() + 150);
 	DestroyAtTime* dT = new DestroyAtTime(0, 250, 0, { 0,0 }, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent);
+	dT->abilityID_ = Abilities::SeismicShock;
+
 	//createProyectile(ent, width, 300, pos, { 0,-10 }, 0, 0, { 0,0 }, 250, ent->getState()->NONE, ent->getState(), ent->getApp(), texture, orientation_, false);
 	instanceEntitywHitbox(ent, width, 300, pos, { 0,-10 }, ent->getState()->NONE, ent->getState(), ent->getApp(), texture, orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::POWER2), false);
@@ -213,8 +224,14 @@ void AbilityFactory::SeismicS3(Entity* ent)	//3 rocks
 	int id = ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber();
 	Texture* texture = app->getAssetsManager()->getTexture(AssetsManager::Ss2);
 	DestroyOnHit* dH = new DestroyOnHit(damage,time,hitstun, knockBack, guardBreaker, id, ent);
+	dH->abilityID_ = Abilities::SeismicShock;
+
 	DestroyOnHit* dH1 = new DestroyOnHit(damage, time, hitstun, knockBack, guardBreaker, id, ent);
+	dH1->abilityID_ = Abilities::SeismicShock;
+
 	DestroyOnHit* dH2 = new DestroyOnHit(damage, time, hitstun, knockBack, guardBreaker, id, ent);
+	dH2->abilityID_ = Abilities::SeismicShock;
+
 
 	
 	instanceEntitywHitbox(ent, width, height, pos, speed, mask, currentState, app, texture, orientation_, dH);
@@ -277,6 +294,8 @@ void AbilityFactory::EW1(Entity* ent)
 	bool guardBreaker = false;
 	int id = ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber();
 	DestroyAtTime* dT = new DestroyAtTime(damage, time, hitstun, knockback, guardBreaker, id, ent);
+	dT->abilityID_ = Abilities::ExplosiveWillpower;
+
 	//Palante
 	int width1 = 100;
 	double projX1 = pT->getPosition().getX() + (pT->getWidth() * 3 / 4) + (width1 / 2) - 80;
@@ -292,6 +311,8 @@ void AbilityFactory::EW1(Entity* ent)
 	Vector2D pos2 = Vector2D(projX2, pT->getPosition().getY() + (pT->getHeight() / 2));
 	knockback = { -10.0 * orientation_, -5.0 };
 	dT = new DestroyAtTime(damage, time, hitstun, knockback, guardBreaker, id, ent);
+	dT->abilityID_ = Abilities::ExplosiveWillpower;
+
 	//createProyectile(ent, width2, 375, pos2, { -4.5 * orientation_, 0 }, 10, 55, { -10.0 * orientation_, -5.0 }, 25, mask, currentState, app, app->getAssetsManager()->getTexture(AssetsManager::Ew1), -orientation_, false);
 	instanceEntitywHitbox(ent, width2, 375, pos2, { 4.5 * -orientation_, 0 }, mask, currentState, app, tex, -orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::EWP), false);
@@ -347,10 +368,14 @@ void AbilityFactory::AS1(Entity* ent)
 	bool multiHit = true;
 	DestroyAtTime* dT = new DestroyAtTime(2, time, 0, Vector2D(0, 0), false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent, multiHit);
 	dT->enableMultiHit(50);
+	dT->abilityID_ = Abilities::AcidSplit;
+
 	Texture* spawntexture = app->getAssetsManager()->getTexture(AssetsManager::As2);
 	Vector2D spawnEntSize(200, 110);
 	Fall_SpawnOnHit* fL = new Fall_SpawnOnHit(damage, time, hitstun, knockBack, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent, dT, spawntexture, spawnEntSize, false, true);	
 	Texture* texture = app->getAssetsManager()->getTexture(AssetsManager::AS1);
+	fL->abilityID_ = Abilities::AcidSplit;
+
 	instanceEntitywHitbox(ent, width, height, pos, speed, mask, currentState, app, texture, orientation_, fL, gravity);
 	//createProyectile(ent, width, height, pos, speed, damage, hitstun, knockBack, time, mask, currentState, app, texture, orientation_, destroyInContact, gravity);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::CRISTAL), false);
@@ -411,10 +436,13 @@ void AbilityFactory::M1(Entity* ent)
 	bool gravity = true;
 	
 	DestroyOnHit* dT = new DestroyOnHit(explosionDamage, time, 0, Vector2D(orientation_ * 5.0, -3), false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent,false);
-	
+	dT->abilityID_ = Abilities::Mina;
+
 	Texture* spawntexture = app->getAssetsManager()->getTexture(AssetsManager::M3);
 	Vector2D spawnEntSize(spawntexture->getWidth()/2, spawntexture->getHeight());
 	Fall_SpawnOnHit* fL = new Fall_SpawnOnHit(damage, time, hitstun, knockBack, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent, dT, spawntexture, spawnEntSize, false, true);
+	fL->abilityID_ = Abilities::Mina;
+
 	Texture* texture = app->getAssetsManager()->getTexture(AssetsManager::M1);
 	instanceEntitywHitbox(ent, width/2, height, pos, speed, mask, currentState, app, texture, orientation_, fL, gravity, false);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::MINA), false);
@@ -468,6 +496,7 @@ void AbilityFactory::PO1(Entity* ent)
 	bool gravity = true;
 
 	DestroyOnHit* dT = new DestroyOnHit(damage, time, 0, Vector2D(orientation_ * 5.0, -3), false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent, false);
+	dT->abilityID_ = Abilities::Pollo;
 
 	Texture* pollotexture = app->getAssetsManager()->getTexture(AssetsManager::PO1);
 	AbilityFactory::instanceEntitywHitbox(ent, width, height, pos, { (double)orientation_ * 10, 1 }, mask, ent->getState(), ent->getApp(), pollotexture, orientation_, dT);
@@ -596,6 +625,7 @@ void AbilityFactory::HS1(Entity* ent)
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + 300);
 
 	DestroyOnHit* dT = new DestroyOnHit(3, 60, 40, { -(double)orientation_ * abs(orX - desX) * 0.055, 0 }, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent);
+	dT->abilityID_ = Abilities::Hookshot;
 
 	Entity* proj = AbilityFactory::instanceEntitywHitbox(ent, width, 145, pos, { (double)orientation_ * 9, 0 }, mask, ent->getState(), ent->getApp(), texture, orientation_, dT);
 
@@ -691,6 +721,7 @@ void AbilityFactory::VS1(Entity* ent)
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + 240);
 
 	VampiricDestroyAtTime* dT = new VampiricDestroyAtTime(5, 20, 30, { (double)orientation_ * 5, -1.3 }, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent, 0.4);
+	dT->abilityID_ = Abilities::VampiricStrike;
 
 	AbilityFactory::instanceEntitywHitbox(ent, width, 145, pos, { 0, 0 }, mask, ent->getState(), ent->getApp(), texture, orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::VAMPIRIC), false);

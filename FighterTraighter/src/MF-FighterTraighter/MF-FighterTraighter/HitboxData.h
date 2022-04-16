@@ -58,6 +58,7 @@ public:
 	bool proyectile_ = false; //si la hitbox es un proyectil, para no eliminarla cuando aterrizas o te interrumpen un ataque
 	int damage_frec = 0;	//frames that the hitbox is not doing damage 
 	int aux_frec = 0;		//if aux_fec == 0, a multiHit hitbox can do damage
-	int attackID_;
+	int attackID_ = -1;
+	int abilityID_ = -1;
 };
 
