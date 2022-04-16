@@ -20,6 +20,8 @@
 #include "InventorySelection.h"
 #include "AIGameState.h"
 #include "ArcadeEndMenu.h"
+#include "Tracker.h"
+
 GameManager::GameManager(App* app) : app_(app)
 {
 	app_->getStateMachine()->pushState(new MainMenu(app_));
@@ -161,6 +163,7 @@ void GameManager::GoBackToMain()
 		app_->getStateMachine()->popState();
 		currState = app_->getStateMachine()->getCurrentState();
 	}
+	Tracker::instance()->flushPersistence();
 }
 
 void GameManager::GoToEndMenu(int winner) {
@@ -174,5 +177,6 @@ void GameManager::GoToEndMenu(int winner) {
 		currState = app_->getStateMachine()->getCurrentState();
 	}
 	app_->getStateMachine()->pushState(new EndMenu(app_, winner));
+	Tracker::instance()->flushPersistence();
 
 }

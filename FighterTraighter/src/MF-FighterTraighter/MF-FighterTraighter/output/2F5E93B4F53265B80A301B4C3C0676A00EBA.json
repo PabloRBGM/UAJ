@@ -1,0 +1,20 @@
+[
+{ "type": 0, "time": 854841130, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA }, 
+{ "type": 2, "time": 854876758, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Character 1": 0, "Abilities 1-1": 8, "Abilities 1-2": 3, "Character 2": 0, "Abilities 2-1": 10, "Abilities 2-2": 1 }, 
+{ "type": 4, "time": 854881486, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 0, "Character": 0, "Attack": 0 }, 
+{ "type": 4, "time": 854881486, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 1, "Character": 0, "Attack": 0 }, 
+{ "type": 4, "time": 854882997, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 0, "Character": 0, "Attack": 1 }, 
+{ "type": 4, "time": 854882997, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 1, "Character": 0, "Attack": 1 }, 
+{ "type": 6, "time": 854883471, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Damage": 9, "Character": 0, "Player": 1, "Attack": 1, "Ability": -1 }, 
+{ "type": 4, "time": 854885131, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 0, "Character": 0, "Attack": 1 }, 
+{ "type": 4, "time": 854885131, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 1, "Character": 0, "Attack": 1 }, 
+{ "type": 4, "time": 854886389, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 0, "Character": 0, "Attack": 1 }, 
+{ "type": 4, "time": 854886389, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 1, "Character": 0, "Attack": 1 }, 
+{ "type": 4, "time": 854888380, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 0, "Character": 0, "Attack": 1 }, 
+{ "type": 4, "time": 854888380, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 1, "Character": 0, "Attack": 1 }, 
+{ "type": 6, "time": 854888862, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Damage": 9, "Character": 0, "Player": 1, "Attack": 1, "Ability": -1 }, 
+{ "type": 4, "time": 854890228, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 0, "Character": 0, "Attack": 1 }, 
+{ "type": 4, "time": 854890228, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Player": 1, "Character": 0, "Attack": 1 }, 
+{ "type": 6, "time": 854890713, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA, "Damage": 9, "Character": 0, "Player": 1, "Attack": 1, "Ability": -1 }, 
+{ "type": 1, "time": 854900350, "session": 2F5E93B4F53265B80A301B4C3C0676A00EBA } 
+]

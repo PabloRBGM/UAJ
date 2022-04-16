@@ -90,7 +90,8 @@ void GameState::addHitbox(Vector2D pos, int width, int height, int time, int dam
 	fixturedef.isSensor = true;
 	fixturedef.filter.categoryBits = cBits;
 	fixturedef.filter.maskBits = mBits & (PLAYER_1 | PLAYER_2 | P_BAG); //kk
-	HitboxData* hData = new HitboxData(damage, time, hitstun, knockBack * app_->METERS_PER_PIXEL, guardBreaker, id, e, hitboxID);
+	HitboxData* hData = new HitboxData(damage, time, hitstun, knockBack * app_->METERS_PER_PIXEL, guardBreaker, id, e);
+	hData->attackID_ = hitboxID;
 	fixturedef.userData = hData;
 
 	hitboxGroups_[id].push_back(body->CreateFixture(&fixturedef));

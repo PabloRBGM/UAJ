@@ -98,6 +98,7 @@ void FightController::end()
 		chars, Players(enumIndex));
 
 	Tracker::instance()->trackEvent(even);
+	Tracker::instance()->flushPersistence();
 
 	app_->getGameManager()->playerLost(playerLost_);
 }

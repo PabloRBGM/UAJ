@@ -8,9 +8,14 @@
 #include "MkWH00PData.h"
 #include "PlayerParticleSystem.h"
 #include "PlayerData.h"
+#include "Tracker.h"
+#include "ReceiveDamageEvent.h"
+#include <chrono>
+
 void PlayerOnHit::onHit(b2Fixture* fixture)
 {
 	HitboxData* hBox_data = static_cast<HitboxData*>(fixture->GetUserData());
+	
 
 	//cout << "Hago " << hBox_data->damage_ << " de damage en PlayerOnHit" << endl;
 	PhysicsTransform* pT = entity_->getComponent<PhysicsTransform>(ecs::Transform);
@@ -18,6 +23,8 @@ void PlayerOnHit::onHit(b2Fixture* fixture)
 	PlayerData* pD = entity_->getComponent<PlayerData>(ecs::PlayerData);
 	Health* helth = entity_->getComponent<Health>(ecs::Health);
 	double startHealth = helth->getHealth();
+	double damage = hBox_data->damage_;
+	
 
 	PlayerParticleSystem* pSystem = entity_->getComponent<PlayerParticleSystem>(ecs::PlayerParticleSystem);
 	if (!currState->isProtected()) {
@@ -51,6 +58,7 @@ void PlayerOnHit::onHit(b2Fixture* fixture)
 
 		}
 		else {		
+			damage *= 0.1;
 			currState->goGuardingStun(hBox_data->hitstun_ * 0.75);
 			helth->LoseLife(hBox_data->damage_ * 0.1);
 			pT->getBody()->ApplyLinearImpulse(b2Vec2((hBox_data->knockBack_.getX() + hBox_data->knockBack_.getX()) * 0.015, 0), pT->getBody()->GetWorldCenter(), true);
@@ -60,6 +68,16 @@ void PlayerOnHit::onHit(b2Fixture* fixture)
 #endif
 
 	}
+
+	TrackerEvent* even = new ReceiveDamageEvent(
+		std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(),
+		damage,
+		Characters(entity_->getApp()->getGameManager()->getPlayerInfo(pD->getPlayerNumber() + 1).character),
+		Players(pD->getPlayerNumber()),
+		Attacks(hBox_data->attackID_),
+		Abilities(hBox_data->abilityID_)
+	);
+	Tracker::instance()->trackEvent(even);
 
 	if (startHealth > helth->getHealth()) {
 		SDL_Delay((startHealth - helth->getHealth()) * 5);
