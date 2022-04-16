@@ -43,7 +43,7 @@ public:
 
 	// Create hitboxes
 	void addHitbox(Vector2D pos, int width, int height, int time, int damage, int hitstun, Vector2D knockBack,
-		b2Body* body, uint16 id, Entity* e, uint16 cBits = 0x0001, uint16 mBits = 0xFFFF, bool guardBreaker = false);
+		b2Body* body, uint16 id, Entity* e, uint16 cBits = 0x0001, uint16 mBits = 0xFFFF, bool guardBreaker = false, int hitboxID = 0);
 	void addHitbox(uint16 id, HitboxData* hitbox, b2Fixture* fixture);
 	void addHurtbox(b2Fixture* fixt) { mainHurtboxes.push_back(fixt); }
 	void killHitbox(std::list<b2Fixture*>::iterator it, unsigned int id);
