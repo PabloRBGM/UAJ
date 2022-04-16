@@ -49,7 +49,7 @@ void PlayerAttacks::handleInput() {
 
 					if (logEvents) {
 						TrackerEvent* even = new AttackEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(),
-							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::NormalKick, Players(playerNum));
+							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::HeavyPunch, Players(playerNum));
 
 						Tracker::instance()->trackEvent(even);
 					}
@@ -62,7 +62,7 @@ void PlayerAttacks::handleInput() {
 
 					if (logEvents) {
 						TrackerEvent* even = new AttackEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(),
-							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::HeavyPunch, Players(playerNum));
+							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::NormalKick, Players(playerNum));
 
 						Tracker::instance()->trackEvent(even);
 					}
@@ -148,7 +148,7 @@ void PlayerAttacks::handleInput() {
 
 					if (logEvents) {
 						TrackerEvent* even = new AttackEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(),
-							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::AirNormalKick, Players(playerNum));
+							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::AirHeavyPunch, Players(playerNum));
 
 						Tracker::instance()->trackEvent(even);
 					}
@@ -160,7 +160,7 @@ void PlayerAttacks::handleInput() {
 
 					if (logEvents) {
 						TrackerEvent* even = new AttackEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(),
-							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::AirHeavyPunch, Players(playerNum));
+							Characters((int)app_->getGameManager()->getPlayerInfo(playerNum + 1).character), Attacks::AirNormalKick, Players(playerNum));
 
 						Tracker::instance()->trackEvent(even);
 					}

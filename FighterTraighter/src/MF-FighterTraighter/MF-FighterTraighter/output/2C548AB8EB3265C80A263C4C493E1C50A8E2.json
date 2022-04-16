@@ -1,9 +1,0 @@
-[
-{ "type": 0, "time": 836902215, "session": 2C548AB8EB3265C80A263C4C493E1C50A8E2 }, 
-{ "type": 2, "time": 836949399, "session": 2C548AB8EB3265C80A263C4C493E1C50A8E2, "Character 1": 1, "Abilities 1-1": 2, "Abilities 1-2": 12, "Character 2": 0, "Abilities 2-1": 6, "Abilities 2-2": 4 }, 
-{ "type": 5, "time": 837001717, "session": 2C548AB8EB3265C80A263C4C493E1C50A8E2, "Player": 1, "Character": 0, "Ability": 6 }, 
-{ "type": 5, "time": 837003630, "session": 2C548AB8EB3265C80A263C4C493E1C50A8E2, "Player": 1, "Character": 0, "Ability": 4 }, 
-{ "type": 5, "time": 837011513, "session": 2C548AB8EB3265C80A263C4C493E1C50A8E2, "Player": 0, "Character": 1, "Ability": 2 }, 
-{ "type": 5, "time": 837014711, "session": 2C548AB8EB3265C80A263C4C493E1C50A8E2, "Player": 0, "Character": 1, "Ability": 12 }, 
-{ "type": 1, "time": 837019397, "session": 2C548AB8EB3265C80A263C4C493E1C50A8E2 } 
-]

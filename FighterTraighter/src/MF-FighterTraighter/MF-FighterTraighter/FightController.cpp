@@ -8,6 +8,7 @@
 
 #include "Tracker.h"
 #include "RoundStartEvent.h"
+#include "RoundEndEvent.h"
 #include <chrono>
 
 void FightController::init() {
@@ -90,6 +91,14 @@ void FightController::PlayerLost(int playerNumber)
 
 void FightController::end()
 {
+	Characters chars[2] = { Characters((int)app_->getGameManager()->getPlayerInfo(1).character), Characters((int)app_->getGameManager()->getPlayerInfo(2).character) };
+	int enumIndex = (playerLost_ < 0)? 2 : (1 - playerLost_);	// Si hay draw o se fuerza a hacer quit se pone que no hay ganador
+
+	TrackerEvent* even = new RoundEndEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(), 
+		chars, Players(enumIndex));
+
+	Tracker::instance()->trackEvent(even);
+
 	app_->getGameManager()->playerLost(playerLost_);
 }
 
