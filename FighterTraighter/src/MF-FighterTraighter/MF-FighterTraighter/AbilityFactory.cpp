@@ -768,6 +768,7 @@ void AbilityFactory::HB1(Entity* ent)
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + 250);
 
 	IceDestroyOnHit* dT = new IceDestroyOnHit(3, 50, 150, { 0, 0 }, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent);
+	dT->abilityID_ = Abilities::HailBall;
 
 	Entity* proj = AbilityFactory::instanceEntitywHitbox(ent, width, 150, pos, { (double)orientation_ * 7.5, 0 }, mask, ent->getState(), ent->getApp(), texture, orientation_, dT);
 
@@ -820,7 +821,7 @@ void AbilityFactory::RS1(Entity* ent)
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + 250);
 
 	DestroyAtTime* dT = new DestroyAtTime(6, 10, 20, { (double)orientation_ * 2, -1.5 }, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent);
-
+	dT->abilityID_ = Abilities::ReachingStrike;
 	Entity* proj = AbilityFactory::instanceEntitywHitbox(ent, width, height, pos, speedd, mask, ent->getState(), ent->getApp(), texture, orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::KICK), false);
 }
@@ -868,6 +869,7 @@ void AbilityFactory::FK1(Entity* e)
 	//e->getApp()->getStateMachine()->getCurrentState()->addHitbox({ (double)orientation_ * hitboxX, 105 }, width, 150, 17, 17, 50, { (double)orientation_ * 5, -100 }, pT->getBody(), e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e, pT->getCategory(), pT->getMask());
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + phtr->getHeight() + -75);
 	FollowPlayer* dT = new FollowPlayer(17, 15, 35, { (double)orientation_ * 5, 5 }, false, e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e);
+	dT->abilityID_ = Abilities::FlyingKicks;
 	//createProyectile(e, width, 150, pos, { 0, 0 }, 17, 200, { (double)orientation_ * 5, 5 }, 50, mask, e->getState(), e->getApp(), texture, orientation_, false);
 	instanceEntitywHitbox(e, width, 150, pos, { 0,0 }, mask, e->getState(), e->getApp(), texture, orientation_, dT);	
 	e->getApp()->getAudioMngr()->playSFX(e->getApp()->getAssetsManager()->getSFX(AssetsManager::KICK), false);
@@ -958,6 +960,7 @@ void AbilityFactory::FK4(Entity* e)
 	//e->getApp()->getStateMachine()->getCurrentState()->addHitbox({ (double)orientation_ * hitboxX, 105 }, width, 150, 17, 17, 50, { (double)orientation_ * 5, -100 }, pT->getBody(), e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e, pT->getCategory(), pT->getMask());
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + phtr->getHeight()-50 );
 	FollowPlayer* dT = new FollowPlayer(5, 20, 20, { (double)orientation_ * 5, -5 }, false, e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e);
+	dT->abilityID_ = Abilities::FlyingKicks;
 	//createProyectile(e, width, 150, pos, { 0, 0 }, 17, 200, { (double)orientation_ * 5, 5 }, 50, mask, e->getState(), e->getApp(), texture, orientation_, false);
 	instanceEntitywHitbox(e, width, height, pos, { 0,0 }, mask, e->getState(), e->getApp(), texture, orientation_, dT);
 	e->getApp()->getAudioMngr()->playSFX(e->getApp()->getAssetsManager()->getSFX(AssetsManager::ROCAS), false);
@@ -1007,6 +1010,7 @@ void AbilityFactory::LL1(Entity* ent)
 
 	Vector2D pos1 = Vector2D(projX1, phtr->getPosition().getY() + 265);
 	DestroyAtTime* dT = new DestroyAtTime(7, 15, 100, { (double)orientation_ * 10, -1 }, false, id, ent);
+	dT->abilityID_ = Abilities::LaserLineal;
 	instanceEntitywHitbox(ent, width1, 75, pos1, { 0,0 }, mask, ent->getState(), ent->getApp(), texture, orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::LASER), false);
 
@@ -1074,6 +1078,7 @@ void AbilityFactory::NK1(Entity* e)
 	//e->getApp()->getStateMachine()->getCurrentState()->addHitbox({ (double)orientation_ * hitboxX, 105 }, width, 150, 17, 17, 50, { (double)orientation_ * 5, -100 }, pT->getBody(), e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e, pT->getCategory(), pT->getMask());
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + phtr->getHeight() + -75);
 	FollowPlayer* dT = new FollowPlayer(damage, time, 50, { (double)orientation_ * 0.02, -1.5 }, false, e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e);
+	dT->abilityID_ = Abilities::NadoKick;
 	//createProyectile(e, width, 150, pos, { 0, 0 }, 17, 200, { (double)orientation_ * 5, 5 }, 50, mask, e->getState(), e->getApp(), texture, orientation_, false);
 	instanceEntitywHitbox(e, width, 150, pos, { 0,0 }, mask, e->getState(), e->getApp(), texture, orientation_, dT);
 	e->getApp()->getAudioMngr()->playSFX(e->getApp()->getAssetsManager()->getSFX(AssetsManager::DASH), false);
@@ -1111,6 +1116,7 @@ void AbilityFactory::NK2(Entity* ent)
 	//e->getApp()->getStateMachine()->getCurrentState()->addHitbox({ (double)orientation_ * hitboxX, 105 }, width, 150, 17, 17, 50, { (double)orientation_ * 5, -100 }, pT->getBody(), e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e, pT->getCategory(), pT->getMask());
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + phtr->getHeight() + -75);
 	FollowPlayer* dT = new FollowPlayer(damage, time, 50, { (double)orientation_ * 25, 5 }, false, ent->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), ent);
+	dT->abilityID_ = Abilities::NadoKick;
 	//createProyectile(e, width, 150, pos, { 0, 0 }, 17, 200, { (double)orientation_ * 5, 5 }, 50, mask, e->getState(), e->getApp(), texture, orientation_, false);
 	instanceEntitywHitbox(ent, width, 150, pos, { 0,0 }, mask, ent->getState(), ent->getApp(), texture, orientation_, dT);
 	ent->getApp()->getAudioMngr()->playSFX(ent->getApp()->getAssetsManager()->getSFX(AssetsManager::DASH), false);
@@ -1247,6 +1253,7 @@ void AbilityFactory::KD2(Entity* e)
 	//e->getApp()->getStateMachine()->getCurrentState()->addHitbox({ (double)orientation_ * hitboxX, 105 }, width, 150, 17, 17, 50, { (double)orientation_ * 5, -100 }, pT->getBody(), e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e, pT->getCategory(), pT->getMask());
 	Vector2D pos = Vector2D(projX, phtr->getPosition().getY() + height /2);
 	FollowPlayer* dT = new FollowPlayer(damage, time, 50, { (double)orientation_ * 25, 5 }, false, e->getComponent<PlayerData>(ecs::PlayerData)->getPlayerNumber(), e);
+	dT->abilityID_ = Abilities::KnockDown;
 	//createProyectile(e, width, 150, pos, { 0, 0 }, 17, 200, { (double)orientation_ * 5, 5 }, 50, mask, e->getState(), e->getApp(), texture, orientation_, false);
 	instanceEntitywHitbox(e, width, height, pos, { 0,0 }, mask, e->getState(), e->getApp(), texture, orientation_, dT);
 	e->getApp()->getAudioMngr()->playSFX(e->getApp()->getAssetsManager()->getSFX(AssetsManager::EXPLOSION), false);
