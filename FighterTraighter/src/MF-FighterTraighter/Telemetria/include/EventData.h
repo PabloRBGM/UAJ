@@ -15,7 +15,7 @@ enum EventType {
 };
 
 enum Players {
-	PLAYER1, PLAYER2
+	PLAYER1, PLAYER2, NONE = -1
 };
 
 enum Characters {
@@ -32,7 +32,7 @@ enum Attacks {
 	AirNormalKick,
 	AirHeavyKick,
 	GuardBreaker,
-	NoAttack
+	NoAttack = -1
 };
 
 enum Abilities {
@@ -59,5 +59,5 @@ enum Abilities {
 	MegatonGrip,
 	SeismicShock,
 	//--------null-------//
-	NoAbility
+	NoAbility = -1
 };
