@@ -6,6 +6,10 @@
 #include "PlayerAttacks.h"
 #include "Shake.h"
 
+#include "Tracker.h"
+#include "RoundStartEvent.h"
+#include <chrono>
+
 void FightController::init() {
 	SDL_Rect wSize = app_->getWindowManager()->getCurResolution();
 	//instanciar el timer en pantalla
@@ -14,6 +18,14 @@ void FightController::init() {
 	msgEnt->addComponent<TextComponent>("0000", app_->getAssetsManager()->getFont(AssetsManager::Roboto_Black), 150, TextComponent::Center);
 	msgEnt->addComponent<UITimer>(UITimer::Seconds)->setCountdown((ini_timer / app_->getFrameRate())  * 1000);
 	disablePlayers(true);
+
+	Characters chars[2] = { Characters((int)app_->getGameManager()->getPlayerInfo(1).character), Characters((int)app_->getGameManager()->getPlayerInfo(2).character) };
+	Abilities abis[2][2] = { {Abilities(app_->getGameManager()->getPlayerInfo(1).abilities[0]), Abilities(app_->getGameManager()->getPlayerInfo(1).abilities[1])},
+		{Abilities(app_->getGameManager()->getPlayerInfo(2).abilities[0]), Abilities(app_->getGameManager()->getPlayerInfo(2).abilities[1])} };
+
+	TrackerEvent* even = new RoundStartEvent(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(), chars, abis);
+
+	Tracker::instance()->trackEvent(even);
 }
 void FightController::update()
 {

@@ -19,7 +19,7 @@ enum Players {
 };
 
 enum Characters {
-	MKWH00P, F10R, Mockingbird
+	F10R, MkWh00p, Mockingbird, Aisha
 };
 
 enum Attacks {
@@ -58,5 +58,6 @@ enum Abilities {
 	//------level 5------//
 	MegatonGrip,
 	SeismicShock,
+	//--------null-------//
 	NoAbility
 };
