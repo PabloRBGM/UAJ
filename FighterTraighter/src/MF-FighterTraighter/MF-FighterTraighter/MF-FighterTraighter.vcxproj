@@ -92,7 +92,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>..\Telemetria\lib;..\SDL2_ttf-2.0.15\lib\x64;..\SDL2_image-2.0.5\lib\x64;..\SDL2_mixer-2.0.4\lib\x64;..\SDL2-2.0.10\lib\x64;..\Box2D\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\Telemetria\lib\Debug;..\SDL2_ttf-2.0.15\lib\x64;..\SDL2_image-2.0.5\lib\x64;..\SDL2_mixer-2.0.4\lib\x64;..\SDL2-2.0.10\lib\x64;..\Box2D\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Telemetria.lib;SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -127,7 +127,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\Telemetria\lib;..\SDL2_ttf-2.0.15\lib\x64;..\SDL2_image-2.0.5\lib\x64;..\SDL2_mixer-2.0.4\lib\x64;..\SDL2-2.0.10\lib\x64;..\Box2D\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\Telemetria\lib\Release;..\SDL2_ttf-2.0.15\lib\x64;..\SDL2_image-2.0.5\lib\x64;..\SDL2_mixer-2.0.4\lib\x64;..\SDL2-2.0.10\lib\x64;..\Box2D\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Telemetria.lib;SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
